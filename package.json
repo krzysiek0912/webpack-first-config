@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start": "webpack --env development",
+    "start": "webpack-dev-server --hot --env development",
     "build": "webpack --env production"
   },
   "author": "",
@@ -22,9 +22,11 @@
     "optimize-js-plugin": "0.0.4",
     "react": "^16.9.0",
     "react-dom": "^16.9.0",
+    "react-hot-loader": "^4.12.11",
     "style-loader": "^1.0.0",
     "webpack": "^4.39.1",
-    "webpack-cli": "^3.3.6"
+    "webpack-cli": "^3.3.6",
+    "webpack-dev-server": "^3.8.0"
   },
   "dependencies": {
     "uuid": "^3.3.2"
