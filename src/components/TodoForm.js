@@ -1,5 +1,5 @@
 import React from "react";
-
+import style from "./TodoForm.css";
 class TodoForm extends React.Component {
   state = {
     todo: ""
@@ -10,11 +10,12 @@ class TodoForm extends React.Component {
   handleSubmit = () => {
     event.preventDefault();
     this.props.handleAdd(this.state.todo);
+    this.setState({ todo: "" });
   };
   render() {
     const { handleSubmit, handleChange, state } = this;
     return (
-      <form onSubmit={handleSubmit}>
+      <form className={style.TodoForm} onSubmit={handleSubmit}>
         <input
           type="text"
           name="todo"
