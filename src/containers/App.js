@@ -1,6 +1,7 @@
 import React from "react";
 import Title from "../components/Title";
 import TodoList from "../components/TodoList";
+import TodoForm from "../components/TodoForm";
 
 import { hot } from "react-hot-loader";
 import uuid from "uuid";
@@ -42,6 +43,7 @@ class App extends React.Component {
       <div className={style.TodoApp}>
         <Title title={"Todo App " + data.length} />
         <TodoList data={data} handleRemove={this.removeTodo} />
+        <TodoForm data={data} handleAdd={this.addTodo} />
       </div>
     );
   }
